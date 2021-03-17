@@ -12,3 +12,4 @@ class Application : Application() {
     val database by lazy { AppDatabase.getDatabase(this, applicationScope) }
     val repository by lazy { Repository(database) }
 }
+

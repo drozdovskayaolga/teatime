@@ -1,17 +1,19 @@
 <resources>
-    <string name="app_name">Tea Time</string>
+    <string name="app_name">Drinks Time</string>
 
-<!--    main activity start -->
+    <!--    main activity start -->
     <string name="choose_your_tea"> Выберите вид чая, чтобы узнать о нем немного больше!  </string>
-<!--    main activity end -->
+    <!--    main activity end -->
 
-<!--    button  start cooking start-->
+    <!--    button  start cooking start-->
     <string name="start_cooking"> Начать готовить! </string>
-<!--    button  start cooking end-->
+    <!--    button  start cooking end-->
 
-<!--    button timer start-->
+    <!--    button timer start-->
     <string name="start_timer"> Начать отсчет </string>
     <string name="reset_timer"> Сбросить </string>
-<!--    button timer end-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    button timer end-->
 
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_root"
+    app:startDestination="@id/typesFragment">
+
+    <fragment
+        android:id="@+id/typesFragment"
+        android:name="com.example.teaceremony.fragments.TypesFragment"
+        android:label="DrinkMainFragment"
+        tools:layout="@layout/fragment_types">
+        <action
+            android:id="@+id/action_drinkMainFragment_to_typesOfDrinkFragment"
+            app:destination="@id/detailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsListFragment"
+        android:name="com.example.teaceremony.fragments.DetailsListFragment"
+        android:label="TypesOfDrinkFragment"
+        tools:layout="@layout/fragment_details_list">
+        <action
+            android:id="@+id/action_typesOfDrinkFragment_to_drinkDetailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailsListFragment_to_ingredientsFragment"
+            app:destination="@id/ingredientsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.teaceremony.fragments.DetailsFragment"
+        android:label="DrinkDetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="details"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientsFragment"
+        android:name="com.example.teaceremony.fragments.IngredientsFragment"
+        android:label="IngredientsFragment"
+        tools:layout="@layout/fragment_ingredients"/>
+
+</navigation>

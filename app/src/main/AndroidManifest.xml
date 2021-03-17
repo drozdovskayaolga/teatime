@@ -6,19 +6,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_main"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name="com.example.teaceremony.application.Application"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.teaceremony.StartCooking"></activity>
-        <activity android:name="com.example.teaceremony.TeaInfoActivity" />
-        <activity android:name="com.example.teaceremony.MainActivity">
+        <activity android:name="com.example.teaceremony.MainActivity"
+            android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

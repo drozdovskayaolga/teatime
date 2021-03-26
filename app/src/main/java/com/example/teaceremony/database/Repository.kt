@@ -23,11 +23,15 @@ class Repository(private val appDatabase: AppDatabase) {
         return appDatabase.detailsDao().getDetailsByType(typeId)
     }
 
+    suspend fun getDrinksByIngredients(ids: List<Int>):List<DetailsEntity> {
+        return appDatabase.detailsDao().getDrinksByIngredients(ids)
+    }
+
     suspend fun getDetailsById(id: Int): DetailsEntity {
         return appDatabase.detailsDao().getDetailsById(id)
     }
 
-    suspend fun getAllIngredients():List<IngredientsEntity>{
+    suspend fun getAllIngredients(): List<IngredientsEntity> {
         return appDatabase.ingredientsDao().getAllIngredients()
     }
 }

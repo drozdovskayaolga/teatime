@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.drozdovskaya.teaceremony.R
+import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.IngredientsEntity
+import com.example.teaceremony.entity.TypesEntity
 
 class IngredientsAdapter :
     ListAdapter<IngredientsEntity, IngredientsAdapter.IngredientsViewHolder>(WordsComparator()) {
@@ -30,7 +32,14 @@ class IngredientsAdapter :
         private val ingredientsItemView: CheckBox = itemView.findViewById(R.id.checkBox)
 
         fun bind(ingredientsEntity: IngredientsEntity) {
+
             ingredientsItemView.text = ingredientsEntity.name
+
+            ingredientsItemView.setOnCheckedChangeListener(null)
+            ingredientsItemView.isChecked = ingredientsEntity.isChecked
+            ingredientsItemView.setOnCheckedChangeListener { _, isChecked ->
+                ingredientsEntity.isChecked = isChecked
+            }
         }
     }
 

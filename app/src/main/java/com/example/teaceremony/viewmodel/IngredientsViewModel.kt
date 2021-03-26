@@ -18,6 +18,7 @@ class IngredientsViewModel(private val repository: Repository) : ViewModel() {
             ingredients.postValue(repository.getAllIngredients())
         }
     }
+
 }
 
 class IngredientsViewModelFactory(private val repository: Repository) : ViewModelProvider.Factory {

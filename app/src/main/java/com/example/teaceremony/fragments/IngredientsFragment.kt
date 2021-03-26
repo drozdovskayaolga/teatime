@@ -2,8 +2,14 @@ package com.example.teaceremony.fragments
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.CheckBox
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
@@ -33,6 +39,8 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
@@ -41,7 +49,14 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
         val recyclerView = view.findViewById<RecyclerView>(R.id.rv_ingredients)
 
         recyclerView.adapter = adapter
-
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val search = view.findViewById<Button>(R.id.b_ingredients)
+
+        search.setOnClickListener {
+            val resultList = adapter.currentList.filter { it.isChecked }.map { it.id }
+            setFragmentResult("requestKey", bundleOf("bundleKey" to resultList))
+            findNavController().popBackStack()
+        }
     }
 }

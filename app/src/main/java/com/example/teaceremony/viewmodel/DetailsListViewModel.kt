@@ -5,22 +5,28 @@ import com.example.teaceremony.database.Repository
 import com.example.teaceremony.entity.DetailsEntity
 import kotlinx.coroutines.launch
 
-class DetailsListViewModel(private val repository: Repository) : ViewModel() {
+class DetailsListViewModel(private val repository: Repository, private val type: Int) :
+    ViewModel() {
 
     val detailsList = MutableLiveData<List<DetailsEntity>>()
 
-    fun typeOfData (typeId: Int) {
+    init {
         viewModelScope.launch {
-            detailsList.postValue(repository.getDetails(typeId = typeId))
+            detailsList.postValue(repository.getDetails(typeId = type))
         }
+    }
+
+    fun loadDetailsByIngredients(ingredientsIds: List<Int>) = viewModelScope.launch {
+        detailsList.postValue(repository.getDrinksByIngredients(ingredientsIds))
     }
 }
 
-class DetailsListViewModelFactory(private val repository: Repository) : ViewModelProvider.Factory {
+class DetailsListViewModelFactory(private val repository: Repository, private val type: Int) :
+    ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(DetailsListViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return DetailsListViewModel(repository) as T
+            return DetailsListViewModel(repository, type) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.teaceremony.dao.DetailsDao
 import com.example.teaceremony.dao.IngredientsDao
+import com.example.teaceremony.dao.IngredientsDetailsCrossDao
 import com.example.teaceremony.dao.TypesDao
 import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.IngredientsDetailsCrossRef
@@ -29,6 +30,8 @@ public abstract class AppDatabase : RoomDatabase() {
 
     abstract fun ingredientsDao(): IngredientsDao
 
+    abstract fun ingredientsDetailsCrossDao(): IngredientsDetailsCrossDao
+
     private class AppDatabaseCallback(
         private val scope: CoroutineScope
     ) : RoomDatabase.Callback() {
@@ -40,6 +43,7 @@ public abstract class AppDatabase : RoomDatabase() {
                     var typesDao = database.typesDao()
                     var detailsDao = database.detailsDao()
                     var ingredientsDao = database.ingredientsDao()
+                    var ingredientsDetailsCrossDao = database.ingredientsDetailsCrossDao()
 
                     // Delete all content here.
                     typesDao.deleteAll()
@@ -65,6 +69,9 @@ public abstract class AppDatabase : RoomDatabase() {
 
                     // Adding list of ingredients
                     ingredientsDao.insertAll(ingredientsList)
+
+                    // Cross
+                    ingredientsDetailsCrossDao.insertAll(crossList)
                 }
             }
         }

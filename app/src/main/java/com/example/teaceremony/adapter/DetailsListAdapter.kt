@@ -12,7 +12,7 @@ import com.drozdovskaya.teaceremony.R
 import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.TypesEntity
 
-class DetailsListAdapter (private val onItemClicked: (DetailsEntity) -> Unit) :
+class DetailsListAdapter(private val onItemClicked: (DetailsEntity) -> Unit) :
     ListAdapter<DetailsEntity, DetailsListAdapter.DetailsListViewHolder>(WordsComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailsListViewHolder {
@@ -42,11 +42,11 @@ class DetailsListAdapter (private val onItemClicked: (DetailsEntity) -> Unit) :
 
     class WordsComparator : DiffUtil.ItemCallback<DetailsEntity>() {
         override fun areItemsTheSame(oldItem: DetailsEntity, newItem: DetailsEntity): Boolean {
-            return oldItem === newItem
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: DetailsEntity, newItem: DetailsEntity): Boolean {
-            return oldItem.name == newItem.name
+            return true
         }
     }
 }

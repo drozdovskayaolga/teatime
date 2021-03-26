@@ -1,6 +1,7 @@
 package com.example.teaceremony.dao
 
 import androidx.room.*
+import com.example.teaceremony.DrinkWithIngredients
 //import com.example.teaceremony.DrinkWithIngredients
 import com.example.teaceremony.entity.DetailsEntity
 
@@ -24,7 +25,11 @@ interface DetailsDao {
     @Query("SELECT * FROM details_table WHERE drinkId=:id")
     suspend fun getDetailsById(id: Int): DetailsEntity
 
-//    @Transaction
-//    @Query("SELECT * FROM details_table")
-//    fun getDrinkWithIngredients(): List<DrinkWithIngredients>
+    @Transaction
+    @Query("SELECT * FROM details_table")
+    fun getDrinkWithIngredients(): List<DrinkWithIngredients>
+
+    @Query("SELECT * FROM details_table d inner join cross_table c on d.drinkId = c.drinkId WHERE c.ingredientId in (:ids) GROUP BY d.drinkId")
+    suspend fun getDrinksByIngredients(ids: List<Int>): List<DetailsEntity>
+
 }

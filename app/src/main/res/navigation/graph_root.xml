@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_detailsListFragment_to_ingredientsFragment"
             app:destination="@id/ingredientsFragment" />
+        <argument
+            android:name="ingredients"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -43,5 +46,6 @@
         android:name="com.example.teaceremony.fragments.IngredientsFragment"
         android:label="IngredientsFragment"
         tools:layout="@layout/fragment_ingredients"/>
+
 
 </navigation>

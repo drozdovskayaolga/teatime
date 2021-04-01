@@ -8,18 +8,17 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.drozdovskaya.teaceremony.R
 import com.example.teaceremony.adapter.TypesAdapter
 import com.example.teaceremony.application.Application
-import com.example.teaceremony.entity.TypesEntity
 import com.example.teaceremony.viewmodel.TypesViewModel
 import com.example.teaceremony.viewmodel.TypesViewModelFactory
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import cz.intik.overflowindicator.SimpleSnapHelper
-import kotlinx.android.synthetic.main.fragment_details_list.*
+import com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
 import kotlinx.android.synthetic.main.fragment_types.*
+
 
 class TypesFragment : Fragment(R.layout.fragment_types) {
 
@@ -51,8 +50,10 @@ class TypesFragment : Fragment(R.layout.fragment_types) {
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
 
-        viewOverflowPagerIndicator.attachToRecyclerView(recyclerView)
-        val snapHelper: SnapHelper = SimpleSnapHelper(viewOverflowPagerIndicator)
+        val indefinitePagerIndicator = view.findViewById<IndefinitePagerIndicator>(R.id.recyclerview_pager_indicator)
+        indefinitePagerIndicator.attachToRecyclerView(recyclerView);
+
+        val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(recyclerView)
 
     }

@@ -3,6 +3,7 @@ package com.example.teaceremony.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
@@ -13,7 +14,7 @@ import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.IngredientsEntity
 import com.example.teaceremony.entity.TypesEntity
 
-class IngredientsAdapter :
+class IngredientsAdapter(private val onItemCheck: () -> Unit) :
     ListAdapter<IngredientsEntity, IngredientsAdapter.IngredientsViewHolder>(WordsComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IngredientsViewHolder {
@@ -39,6 +40,7 @@ class IngredientsAdapter :
             ingredientsItemView.isChecked = ingredientsEntity.isChecked
             ingredientsItemView.setOnCheckedChangeListener { _, isChecked ->
                 ingredientsEntity.isChecked = isChecked
+                onItemCheck()
             }
         }
     }

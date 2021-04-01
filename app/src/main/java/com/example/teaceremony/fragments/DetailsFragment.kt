@@ -13,6 +13,8 @@ import com.drozdovskaya.teaceremony.R
 import com.example.teaceremony.application.Application
 import com.example.teaceremony.viewmodel.DetailsViewModel
 import com.example.teaceremony.viewmodel.DetailsViewModelFactory
+import kotlinx.android.synthetic.main.fragment_details.*
+import kotlinx.android.synthetic.main.fragment_details_list.*
 import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.android.synthetic.main.toolbar.view.*
 
@@ -39,6 +41,20 @@ class DetailsFragment: Fragment(R.layout.fragment_details) {
 
         val details = requireArguments().getInt("details",0)
         detailsViewModel.typeOfData(details)
+
+        val type = requireArguments().getInt("type",0)
+
+        when (type) {
+            1 -> {
+                iv_details.setImageResource(R.drawable.teamainphoto)
+            }
+            2 -> {
+                iv_details.setImageResource(R.drawable.coffeemainphoto)
+            }
+            else -> {
+                iv_details.setImageResource(R.drawable.cocktailmainphoto)
+            }
+        }
 
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener {

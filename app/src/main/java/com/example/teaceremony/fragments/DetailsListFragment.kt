@@ -21,6 +21,7 @@ import com.example.teaceremony.viewmodel.DetailsListViewModel
 import com.example.teaceremony.viewmodel.DetailsListViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_details_list.*
+import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.coroutines.launch
 
 class DetailsListFragment : Fragment(R.layout.fragment_details_list) {
@@ -28,7 +29,7 @@ class DetailsListFragment : Fragment(R.layout.fragment_details_list) {
     private val adapter = DetailsListAdapter {
         findNavController().navigate(
             R.id.action_typesOfDrinkFragment_to_drinkDetailsFragment,
-            bundleOf("details" to it.id)
+            bundleOf("details" to it.id, "type" to it.typeId)
         )
     }
 
@@ -79,6 +80,7 @@ class DetailsListFragment : Fragment(R.layout.fragment_details_list) {
         setFragmentResultListener("requestKey") { key, bundle ->
             val result = bundle.getIntegerArrayList("bundleKey") ?: return@setFragmentResultListener
             detailsListViewModel.loadDetailsByIngredients(result)
+            toolbar_title.text = "Результат поиска"
         }
     }
 }

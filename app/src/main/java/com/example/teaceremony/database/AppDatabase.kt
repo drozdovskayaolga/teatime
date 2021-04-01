@@ -15,6 +15,7 @@ import com.example.teaceremony.entity.IngredientsEntity
 import com.example.teaceremony.entity.TypesEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 // Annotates class to be a Room Database with a table (entity) of the  class
 @Database(
@@ -32,50 +33,6 @@ public abstract class AppDatabase : RoomDatabase() {
 
     abstract fun ingredientsDetailsCrossDao(): IngredientsDetailsCrossDao
 
-    private class AppDatabaseCallback(
-        private val scope: CoroutineScope
-    ) : RoomDatabase.Callback() {
-
-        override fun onCreate(db: SupportSQLiteDatabase) {
-            super.onCreate(db)
-            INSTANCE?.let { database ->
-                scope.launch {
-                    var typesDao = database.typesDao()
-                    var detailsDao = database.detailsDao()
-                    var ingredientsDao = database.ingredientsDao()
-                    var ingredientsDetailsCrossDao = database.ingredientsDetailsCrossDao()
-
-                    // Delete all content here.
-                    typesDao.deleteAll()
-                    detailsDao.deleteAll()
-
-                    // Adding types
-                    val tea = TypesEntity(1, "Чай")
-                    typesDao.insert(tea)
-                    val coffee = TypesEntity(2, "Кофе")
-                    typesDao.insert(coffee)
-                    val cocktail = TypesEntity(3, "Коктейли")
-                    typesDao.insert(cocktail)
-
-                    // Adding list of drinks
-                    // TEA
-                    detailsDao.insertAll(teaList)
-
-                    // COFFEE
-                    detailsDao.insertAll(coffeeList)
-
-                    // COCKTAILS
-                    detailsDao.insertAll(cocktailsList)
-
-                    // Adding list of ingredients
-                    ingredientsDao.insertAll(ingredientsList)
-
-                    // Cross
-                    ingredientsDetailsCrossDao.insertAll(crossList)
-                }
-            }
-        }
-    }
 
     companion object {
         // Singleton prevents multiple instances of database opening at the
@@ -94,10 +51,44 @@ public abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                )
-                    .addCallback(AppDatabaseCallback(scope))
-                    .build()
+                ).build()
                 INSTANCE = instance
+                runBlocking {
+                    INSTANCE?.let { database ->
+                        var typesDao = database.typesDao()
+                        var detailsDao = database.detailsDao()
+                        var ingredientsDao = database.ingredientsDao()
+                        var ingredientsDetailsCrossDao = database.ingredientsDetailsCrossDao()
+
+                        // Delete all content here.
+                        typesDao.deleteAll()
+                        detailsDao.deleteAll()
+
+                        // Adding types
+                        val tea = TypesEntity(1, "Чай")
+                        typesDao.insert(tea)
+                        val coffee = TypesEntity(2, "Кофе")
+                        typesDao.insert(coffee)
+                        val cocktail = TypesEntity(3, "Коктейли")
+                        typesDao.insert(cocktail)
+
+                        // Adding list of drinks
+                        // TEA
+                        detailsDao.insertAll(teaList)
+
+                        // COFFEE
+                        detailsDao.insertAll(coffeeList)
+
+                        // COCKTAILS
+                        detailsDao.insertAll(cocktailsList)
+
+                        // Adding list of ingredients
+                        ingredientsDao.insertAll(ingredientsList)
+
+                        // Cross
+                        ingredientsDetailsCrossDao.insertAll(crossList)
+                    }
+                }
                 // return instance
                 instance
             }

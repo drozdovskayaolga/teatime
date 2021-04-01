@@ -14,17 +14,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <cz.intik.overflowindicator.OverflowPagerIndicator
-        android:id="@+id/viewOverflowPagerIndicator"
+    <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
+        android:id="@+id/recyclerview_pager_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        app:indicatorSize="14dp"
-        app:indicatorFillColor="@color/colorPrimaryDark"
-        app:indicatorStrokeColor="@color/colorPrimary"
         android:layout_marginBottom="36dp"
+        app:dotRadius="6dp"
+        app:selectedDotRadius="6dp"
+        app:dotColor="@color/transparent"
+        app:selectedDotColor="@color/colorPrimaryDark"
+        app:dotSeparation="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

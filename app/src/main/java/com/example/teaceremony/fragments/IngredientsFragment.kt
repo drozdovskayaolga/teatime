@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
@@ -20,10 +21,15 @@ import com.example.teaceremony.adapter.IngredientsAdapter
 import com.example.teaceremony.application.Application
 import com.example.teaceremony.viewmodel.IngredientsViewModel
 import com.example.teaceremony.viewmodel.IngredientsViewModelFactory
+import kotlinx.android.synthetic.main.toolbar.*
 
 class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
 
-    private val adapter = IngredientsAdapter()
+    private val searchButton: Button by lazy { requireView().findViewById<Button>(R.id.b_ingredients) }
+
+    private val adapter = IngredientsAdapter{
+        onItemCheck()
+    }
 
     private val ingredientsViewModel: IngredientsViewModel by viewModels {
         IngredientsViewModelFactory((requireActivity().application as Application).repository)
@@ -39,7 +45,7 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        toolbar_title.text = "Поиск по ингредиентам"
 
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener {
@@ -51,12 +57,14 @@ class IngredientsFragment : Fragment(R.layout.fragment_ingredients) {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val search = view.findViewById<Button>(R.id.b_ingredients)
-
-        search.setOnClickListener {
+        searchButton.setOnClickListener {
             val resultList = adapter.currentList.filter { it.isChecked }.map { it.id }
             setFragmentResult("requestKey", bundleOf("bundleKey" to resultList))
             findNavController().popBackStack()
         }
+    }
+
+    private fun onItemCheck(){
+        searchButton.isVisible = adapter.currentList.any { it.isChecked }
     }
 }

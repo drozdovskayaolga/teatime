@@ -38,12 +38,16 @@ class TypesAdapter(private val onItemClicked: (TypesEntity) -> Unit) :
 
             typeItemView.text = typesEntity.name
 
-            if (typesEntity.id == 1) {
-                typeImage.setImageResource(R.drawable.teamainphoto)
-            } else if (typesEntity.id == 2) {
-                typeImage.setImageResource(R.drawable.coffeemainphoto)
-            } else {
-                typeImage.setImageResource(R.drawable.cocktailmainphoto)
+            when (typesEntity.id) {
+                1 -> {
+                    typeImage.setImageResource(R.drawable.teamainphoto)
+                }
+                2 -> {
+                    typeImage.setImageResource(R.drawable.coffeemainphoto)
+                }
+                else -> {
+                    typeImage.setImageResource(R.drawable.cocktailmainphoto)
+                }
             }
         }
     }

@@ -40,6 +40,8 @@
         <argument
             android:name="details"
             app:argType="integer" />
+        <argument android:name="type"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/ingredientsFragment"

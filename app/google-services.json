@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "699798903723",
+    "project_id": "drinks-time",
+    "storage_bucket": "drinks-time.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699798903723:android:f36b02acc0b50ea78c10ee",
+        "android_client_info": {
+          "package_name": "com.drozdovskaya.teaceremony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699798903723-6ds7s89ondot5ttth3eldmqpjarfuu62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_ki3gjBSej0b93KdW_tOfbPTg8USuXvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699798903723-6ds7s89ondot5ttth3eldmqpjarfuu62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

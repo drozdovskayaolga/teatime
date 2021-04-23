@@ -12,7 +12,7 @@ import java.util.*
             childColumns = ["typeId"],
             onDelete = ForeignKey.CASCADE
         )])
-class DetailsEntity(@PrimaryKey @ColumnInfo(name = "drinkId") var id: Int,
-                    @ColumnInfo(name = "name") val name: String,
-                    @ColumnInfo(name = "info") val info: String,
-                    @ColumnInfo(name = "typeId") val typeId: Int)
+class DrinksEntity(@PrimaryKey @ColumnInfo(name = "drinkId") var id: Int,
+                   @ColumnInfo(name = "name") val name: String,
+                   @ColumnInfo(name = "info") val info: String,
+                   @ColumnInfo(name = "typeId") val typeId: Int)

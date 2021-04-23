@@ -1,6 +1,6 @@
 package com.example.teaceremony.database
 
-import com.example.teaceremony.entity.DetailsEntity
+import com.example.teaceremony.entity.DrinksEntity
 import com.example.teaceremony.entity.IngredientsEntity
 import com.example.teaceremony.entity.TypesEntity
 
@@ -9,9 +9,9 @@ import com.example.teaceremony.entity.TypesEntity
 class Repository(private val appDatabase: AppDatabase) {
 
 
-    suspend fun insert(drink: TypesEntity, info: DetailsEntity, ingredient: IngredientsEntity) {
+    suspend fun insert(drink: TypesEntity, info: DrinksEntity, ingredient: IngredientsEntity) {
         appDatabase.typesDao().insert(drink)
-        appDatabase.detailsDao().insert(info)
+        appDatabase.drinksDao().insert(info)
         appDatabase.ingredientsDao().insert(ingredient)
     }
 
@@ -19,16 +19,16 @@ class Repository(private val appDatabase: AppDatabase) {
         return appDatabase.typesDao().getTypes()
     }
 
-    suspend fun getDetails(typeId: Int): List<DetailsEntity> {
-        return appDatabase.detailsDao().getDetailsByType(typeId)
+    suspend fun getDetails(typeId: Int): List<DrinksEntity> {
+        return appDatabase.drinksDao().getDetailsByType(typeId)
     }
 
-    suspend fun getDrinksByIngredients(ids: List<Int>):List<DetailsEntity> {
-        return appDatabase.detailsDao().getDrinksByIngredients(ids)
+    suspend fun getDrinksByIngredients(ids: List<Int>):List<DrinksEntity> {
+        return appDatabase.drinksDao().getDrinksByIngredients(ids)
     }
 
-    suspend fun getDetailsById(id: Int): DetailsEntity {
-        return appDatabase.detailsDao().getDetailsById(id)
+    suspend fun getDetailsById(id: Int): DrinksEntity {
+        return appDatabase.drinksDao().getDetailsById(id)
     }
 
     suspend fun getAllIngredients(): List<IngredientsEntity> {

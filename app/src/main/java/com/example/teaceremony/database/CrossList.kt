@@ -1,307 +1,307 @@
 package com.example.teaceremony.database
 
-import com.example.teaceremony.entity.IngredientsDetailsCrossRef
+import com.example.teaceremony.entity.CrossEntity
 
 val crossList = listOf(
-    IngredientsDetailsCrossRef(100, 5),
-    IngredientsDetailsCrossRef(100, 20),
-    IngredientsDetailsCrossRef(100, 48),
-
-    IngredientsDetailsCrossRef(101, 27),
-    IngredientsDetailsCrossRef(101, 32),
-    IngredientsDetailsCrossRef(101, 51),
-
-    IngredientsDetailsCrossRef(102, 13),
-    IngredientsDetailsCrossRef(102, 16),
-    IngredientsDetailsCrossRef(102, 25),
-
-    IngredientsDetailsCrossRef(103, 9),
-    IngredientsDetailsCrossRef(103, 39),
-    IngredientsDetailsCrossRef(103, 49),
-
-    IngredientsDetailsCrossRef(104, 6),
-    IngredientsDetailsCrossRef(104, 21),
-    IngredientsDetailsCrossRef(104, 35),
-    IngredientsDetailsCrossRef(104, 44),
-    IngredientsDetailsCrossRef(104, 49),
-
-    IngredientsDetailsCrossRef(105, 5),
-    IngredientsDetailsCrossRef(105, 13),
-    IngredientsDetailsCrossRef(105, 48),
-
-    IngredientsDetailsCrossRef(106, 35),
-
-    IngredientsDetailsCrossRef(107, 2),
-    IngredientsDetailsCrossRef(107, 26),
-    IngredientsDetailsCrossRef(107, 53),
-
-    IngredientsDetailsCrossRef(108, 10),
-    IngredientsDetailsCrossRef(108, 45),
-    IngredientsDetailsCrossRef(108, 49),
-    IngredientsDetailsCrossRef(108, 50),
-
-    IngredientsDetailsCrossRef(109, 30),
-    IngredientsDetailsCrossRef(109, 32),
-    IngredientsDetailsCrossRef(109, 34),
-    IngredientsDetailsCrossRef(109, 35),
-    IngredientsDetailsCrossRef(109, 51),
-
-    IngredientsDetailsCrossRef(110, 4),
-    IngredientsDetailsCrossRef(110, 5),
-    IngredientsDetailsCrossRef(110, 28),
-
-    IngredientsDetailsCrossRef(111, 3),
-    IngredientsDetailsCrossRef(111, 43),
-    IngredientsDetailsCrossRef(111, 48),
-
-    IngredientsDetailsCrossRef(112, 10),
-    IngredientsDetailsCrossRef(112, 39),
-    IngredientsDetailsCrossRef(112, 45),
-
-    IngredientsDetailsCrossRef(113, 1),
-    IngredientsDetailsCrossRef(113, 5),
-    IngredientsDetailsCrossRef(113, 39),
-    IngredientsDetailsCrossRef(113, 45),
-
-    IngredientsDetailsCrossRef(114, 4),
-    IngredientsDetailsCrossRef(114, 28),
-
-    IngredientsDetailsCrossRef(115, 9),
-    IngredientsDetailsCrossRef(115, 49),
-
-    IngredientsDetailsCrossRef(116, 5),
-    IngredientsDetailsCrossRef(116, 33),
-
-    IngredientsDetailsCrossRef(117, 5),
-    IngredientsDetailsCrossRef(117, 43),
-    IngredientsDetailsCrossRef(117, 48),
-    IngredientsDetailsCrossRef(117, 51),
-
-    IngredientsDetailsCrossRef(118, 5),
-    IngredientsDetailsCrossRef(118, 48),
-    IngredientsDetailsCrossRef(118, 51),
-
-    IngredientsDetailsCrossRef(119, 5),
-    IngredientsDetailsCrossRef(119, 15),
-    IngredientsDetailsCrossRef(119, 43),
-    IngredientsDetailsCrossRef(119, 48),
-
-    IngredientsDetailsCrossRef(120, 9),
-    IngredientsDetailsCrossRef(120, 13),
-    IngredientsDetailsCrossRef(120, 21),
-    IngredientsDetailsCrossRef(120, 49),
-
-    IngredientsDetailsCrossRef(121, 13),
-    IngredientsDetailsCrossRef(121, 21),
-    IngredientsDetailsCrossRef(121, 45),
-    IngredientsDetailsCrossRef(121, 53),
-
-    IngredientsDetailsCrossRef(122, 5),
-    IngredientsDetailsCrossRef(122, 20),
-    IngredientsDetailsCrossRef(122, 29),
-    IngredientsDetailsCrossRef(122, 48),
-
-    IngredientsDetailsCrossRef(123, 4),
-    IngredientsDetailsCrossRef(123, 9),
-    IngredientsDetailsCrossRef(123, 32),
+    CrossEntity(100, 5),
+    CrossEntity(100, 20),
+    CrossEntity(100, 48),
+
+    CrossEntity(101, 27),
+    CrossEntity(101, 32),
+    CrossEntity(101, 51),
+
+    CrossEntity(102, 13),
+    CrossEntity(102, 16),
+    CrossEntity(102, 25),
+
+    CrossEntity(103, 9),
+    CrossEntity(103, 39),
+    CrossEntity(103, 49),
+
+    CrossEntity(104, 6),
+    CrossEntity(104, 21),
+    CrossEntity(104, 35),
+    CrossEntity(104, 44),
+    CrossEntity(104, 49),
+
+    CrossEntity(105, 5),
+    CrossEntity(105, 13),
+    CrossEntity(105, 48),
+
+    CrossEntity(106, 35),
+
+    CrossEntity(107, 2),
+    CrossEntity(107, 26),
+    CrossEntity(107, 53),
+
+    CrossEntity(108, 10),
+    CrossEntity(108, 45),
+    CrossEntity(108, 49),
+    CrossEntity(108, 50),
+
+    CrossEntity(109, 30),
+    CrossEntity(109, 32),
+    CrossEntity(109, 34),
+    CrossEntity(109, 35),
+    CrossEntity(109, 51),
+
+    CrossEntity(110, 4),
+    CrossEntity(110, 5),
+    CrossEntity(110, 28),
+
+    CrossEntity(111, 3),
+    CrossEntity(111, 43),
+    CrossEntity(111, 48),
+
+    CrossEntity(112, 10),
+    CrossEntity(112, 39),
+    CrossEntity(112, 45),
+
+    CrossEntity(113, 1),
+    CrossEntity(113, 5),
+    CrossEntity(113, 39),
+    CrossEntity(113, 45),
+
+    CrossEntity(114, 4),
+    CrossEntity(114, 28),
+
+    CrossEntity(115, 9),
+    CrossEntity(115, 49),
+
+    CrossEntity(116, 5),
+    CrossEntity(116, 33),
+
+    CrossEntity(117, 5),
+    CrossEntity(117, 43),
+    CrossEntity(117, 48),
+    CrossEntity(117, 51),
+
+    CrossEntity(118, 5),
+    CrossEntity(118, 48),
+    CrossEntity(118, 51),
+
+    CrossEntity(119, 5),
+    CrossEntity(119, 15),
+    CrossEntity(119, 43),
+    CrossEntity(119, 48),
+
+    CrossEntity(120, 9),
+    CrossEntity(120, 13),
+    CrossEntity(120, 21),
+    CrossEntity(120, 49),
+
+    CrossEntity(121, 13),
+    CrossEntity(121, 21),
+    CrossEntity(121, 45),
+    CrossEntity(121, 53),
+
+    CrossEntity(122, 5),
+    CrossEntity(122, 20),
+    CrossEntity(122, 29),
+    CrossEntity(122, 48),
+
+    CrossEntity(123, 4),
+    CrossEntity(123, 9),
+    CrossEntity(123, 32),
 
-    IngredientsDetailsCrossRef(124, 19),
-    IngredientsDetailsCrossRef(124, 34),
+    CrossEntity(124, 19),
+    CrossEntity(124, 34),
 
-    IngredientsDetailsCrossRef(125, 5),
-    IngredientsDetailsCrossRef(125, 41),
-    IngredientsDetailsCrossRef(125, 48),
+    CrossEntity(125, 5),
+    CrossEntity(125, 41),
+    CrossEntity(125, 48),
 
-    IngredientsDetailsCrossRef(126, 4),
-    IngredientsDetailsCrossRef(126, 13),
-    IngredientsDetailsCrossRef(126, 47),
-    IngredientsDetailsCrossRef(126, 48),
+    CrossEntity(126, 4),
+    CrossEntity(126, 13),
+    CrossEntity(126, 47),
+    CrossEntity(126, 48),
 
-    IngredientsDetailsCrossRef(127, 4),
-    IngredientsDetailsCrossRef(127, 17),
+    CrossEntity(127, 4),
+    CrossEntity(127, 17),
 
-    IngredientsDetailsCrossRef(128, 3),
-    IngredientsDetailsCrossRef(128, 17),
+    CrossEntity(128, 3),
+    CrossEntity(128, 17),
 
-    IngredientsDetailsCrossRef(129, 4),
-    IngredientsDetailsCrossRef(129, 48),
-    IngredientsDetailsCrossRef(129, 50),
+    CrossEntity(129, 4),
+    CrossEntity(129, 48),
+    CrossEntity(129, 50),
 
-    IngredientsDetailsCrossRef(130, 9),
-    IngredientsDetailsCrossRef(130, 49),
+    CrossEntity(130, 9),
+    CrossEntity(130, 49),
 
-    IngredientsDetailsCrossRef(131, 23),
-    IngredientsDetailsCrossRef(131, 26),
-    IngredientsDetailsCrossRef(131, 53),
+    CrossEntity(131, 23),
+    CrossEntity(131, 26),
+    CrossEntity(131, 53),
 
-    IngredientsDetailsCrossRef(132, 2),
-    IngredientsDetailsCrossRef(132, 5),
-
-    IngredientsDetailsCrossRef(133, 4),
-    IngredientsDetailsCrossRef(133, 5),
-    IngredientsDetailsCrossRef(133, 9),
-    IngredientsDetailsCrossRef(133, 10),
-    IngredientsDetailsCrossRef(133, 13),
-    IngredientsDetailsCrossRef(133, 43),
-    IngredientsDetailsCrossRef(133, 48),
+    CrossEntity(132, 2),
+    CrossEntity(132, 5),
+
+    CrossEntity(133, 4),
+    CrossEntity(133, 5),
+    CrossEntity(133, 9),
+    CrossEntity(133, 10),
+    CrossEntity(133, 13),
+    CrossEntity(133, 43),
+    CrossEntity(133, 48),
 
-    IngredientsDetailsCrossRef(134, 2),
-    IngredientsDetailsCrossRef(134, 31),
-    IngredientsDetailsCrossRef(134, 38),
+    CrossEntity(134, 2),
+    CrossEntity(134, 31),
+    CrossEntity(134, 38),
 
-    IngredientsDetailsCrossRef(135, 9),
-    IngredientsDetailsCrossRef(135, 11),
-    IngredientsDetailsCrossRef(135, 13),
-    IngredientsDetailsCrossRef(135, 42),
-    IngredientsDetailsCrossRef(135, 49),
+    CrossEntity(135, 9),
+    CrossEntity(135, 11),
+    CrossEntity(135, 13),
+    CrossEntity(135, 42),
+    CrossEntity(135, 49),
 
-    IngredientsDetailsCrossRef(136, 3),
-    IngredientsDetailsCrossRef(136, 27),
-    IngredientsDetailsCrossRef(136, 31),
-
-    IngredientsDetailsCrossRef(137, 10),
-    IngredientsDetailsCrossRef(137, 13),
-    IngredientsDetailsCrossRef(137, 49),
-
-    IngredientsDetailsCrossRef(138, 10),
-    IngredientsDetailsCrossRef(138, 49),
-
-    IngredientsDetailsCrossRef(139, 5),
-    IngredientsDetailsCrossRef(139, 28),
-
-    IngredientsDetailsCrossRef(140, 4),
-    IngredientsDetailsCrossRef(140, 13),
-    IngredientsDetailsCrossRef(140, 48),
-
-    IngredientsDetailsCrossRef(141, 9),
-    IngredientsDetailsCrossRef(141, 7),
-    IngredientsDetailsCrossRef(141, 13),
-    IngredientsDetailsCrossRef(141, 48),
-
-    IngredientsDetailsCrossRef(142, 36),
-    IngredientsDetailsCrossRef(142, 45),
-
-    IngredientsDetailsCrossRef(143, 4),
-    IngredientsDetailsCrossRef(143, 46),
-    IngredientsDetailsCrossRef(143, 47),
-
-    IngredientsDetailsCrossRef(144, 4),
-    IngredientsDetailsCrossRef(144, 37),
-    IngredientsDetailsCrossRef(144, 49),
-
-    IngredientsDetailsCrossRef(145, 9),
-    IngredientsDetailsCrossRef(145, 49),
-    IngredientsDetailsCrossRef(145, 51),
-
-    IngredientsDetailsCrossRef(146, 9),
-    IngredientsDetailsCrossRef(146, 20),
-    IngredientsDetailsCrossRef(146, 39),
-    IngredientsDetailsCrossRef(146, 44),
-
-    IngredientsDetailsCrossRef(147, 3),
-
-    IngredientsDetailsCrossRef(148, 5),
-    IngredientsDetailsCrossRef(148, 27),
-    IngredientsDetailsCrossRef(148, 32),
-
-    IngredientsDetailsCrossRef(149, 3),
-    IngredientsDetailsCrossRef(149, 51),
-
-    IngredientsDetailsCrossRef(150, 4),
-    IngredientsDetailsCrossRef(150, 45),
-
-    IngredientsDetailsCrossRef(151, 5),
-    IngredientsDetailsCrossRef(151, 12),
-    IngredientsDetailsCrossRef(151, 45),
-
-    IngredientsDetailsCrossRef(152, 9),
-    IngredientsDetailsCrossRef(152, 44),
-    IngredientsDetailsCrossRef(152, 52),
-
-    IngredientsDetailsCrossRef(153, 11),
-    IngredientsDetailsCrossRef(153, 31),
-    IngredientsDetailsCrossRef(153, 39),
-    IngredientsDetailsCrossRef(153, 43),
-
-    IngredientsDetailsCrossRef(154, 2),
-    IngredientsDetailsCrossRef(154, 8),
-
-    IngredientsDetailsCrossRef(155, 5),
-    IngredientsDetailsCrossRef(155, 43),
-    IngredientsDetailsCrossRef(155, 48),
-    IngredientsDetailsCrossRef(155, 49),
-    IngredientsDetailsCrossRef(155, 51),
-    IngredientsDetailsCrossRef(155, 53),
-
-    IngredientsDetailsCrossRef(156, 14),
-    IngredientsDetailsCrossRef(156, 28),
-    IngredientsDetailsCrossRef(156, 40),
-
-    IngredientsDetailsCrossRef(157, 3),
-    IngredientsDetailsCrossRef(157, 18),
-
-    IngredientsDetailsCrossRef(158, 1),
-    IngredientsDetailsCrossRef(158, 7),
-
-    IngredientsDetailsCrossRef(159, 7),
-    IngredientsDetailsCrossRef(159, 13),
-    IngredientsDetailsCrossRef(159, 48),
-
-    IngredientsDetailsCrossRef(160, 4),
-    IngredientsDetailsCrossRef(160, 24),
-    IngredientsDetailsCrossRef(160, 45),
-    IngredientsDetailsCrossRef(160, 47),
-
-    IngredientsDetailsCrossRef(161, 5),
-    IngredientsDetailsCrossRef(161, 13),
-    IngredientsDetailsCrossRef(161, 14),
-    IngredientsDetailsCrossRef(161, 31),
-    IngredientsDetailsCrossRef(161, 39),
-    IngredientsDetailsCrossRef(161, 44),
-    IngredientsDetailsCrossRef(161, 48),
-
-    IngredientsDetailsCrossRef(162, 1),
-    IngredientsDetailsCrossRef(162, 5),
-    IngredientsDetailsCrossRef(162, 20),
-    IngredientsDetailsCrossRef(162, 28),
-    IngredientsDetailsCrossRef(162, 29),
-
-    IngredientsDetailsCrossRef(163, 7),
-    IngredientsDetailsCrossRef(163, 23),
-
-    IngredientsDetailsCrossRef(164, 11),
-    IngredientsDetailsCrossRef(164, 37),
-
-    IngredientsDetailsCrossRef(165, 4),
-    IngredientsDetailsCrossRef(165, 22),
-    IngredientsDetailsCrossRef(165, 44),
-
-    IngredientsDetailsCrossRef(166, 2),
-    IngredientsDetailsCrossRef(166, 7),
-    IngredientsDetailsCrossRef(166, 17),
-
-    IngredientsDetailsCrossRef(167, 5),
-    IngredientsDetailsCrossRef(167, 36),
-    IngredientsDetailsCrossRef(167, 43),
-    IngredientsDetailsCrossRef(167, 48),
-
-    IngredientsDetailsCrossRef(168, 4),
-    IngredientsDetailsCrossRef(168, 21),
-    IngredientsDetailsCrossRef(168, 45),
-
-    IngredientsDetailsCrossRef(169, 9),
-    IngredientsDetailsCrossRef(169, 20),
-    IngredientsDetailsCrossRef(169, 46),
-    IngredientsDetailsCrossRef(169, 49),
-
-    IngredientsDetailsCrossRef(170, 4),
-    IngredientsDetailsCrossRef(170, 16),
-
-    IngredientsDetailsCrossRef(171, 2),
-    IngredientsDetailsCrossRef(171, 31),
-    IngredientsDetailsCrossRef(171, 36),
-
-    IngredientsDetailsCrossRef(172, 4),
-    IngredientsDetailsCrossRef(172, 16),
-    IngredientsDetailsCrossRef(172, 43)
+    CrossEntity(136, 3),
+    CrossEntity(136, 27),
+    CrossEntity(136, 31),
+
+    CrossEntity(137, 10),
+    CrossEntity(137, 13),
+    CrossEntity(137, 49),
+
+    CrossEntity(138, 10),
+    CrossEntity(138, 49),
+
+    CrossEntity(139, 5),
+    CrossEntity(139, 28),
+
+    CrossEntity(140, 4),
+    CrossEntity(140, 13),
+    CrossEntity(140, 48),
+
+    CrossEntity(141, 9),
+    CrossEntity(141, 7),
+    CrossEntity(141, 13),
+    CrossEntity(141, 48),
+
+    CrossEntity(142, 36),
+    CrossEntity(142, 45),
+
+    CrossEntity(143, 4),
+    CrossEntity(143, 46),
+    CrossEntity(143, 47),
+
+    CrossEntity(144, 4),
+    CrossEntity(144, 37),
+    CrossEntity(144, 49),
+
+    CrossEntity(145, 9),
+    CrossEntity(145, 49),
+    CrossEntity(145, 51),
+
+    CrossEntity(146, 9),
+    CrossEntity(146, 20),
+    CrossEntity(146, 39),
+    CrossEntity(146, 44),
+
+    CrossEntity(147, 3),
+
+    CrossEntity(148, 5),
+    CrossEntity(148, 27),
+    CrossEntity(148, 32),
+
+    CrossEntity(149, 3),
+    CrossEntity(149, 51),
+
+    CrossEntity(150, 4),
+    CrossEntity(150, 45),
+
+    CrossEntity(151, 5),
+    CrossEntity(151, 12),
+    CrossEntity(151, 45),
+
+    CrossEntity(152, 9),
+    CrossEntity(152, 44),
+    CrossEntity(152, 52),
+
+    CrossEntity(153, 11),
+    CrossEntity(153, 31),
+    CrossEntity(153, 39),
+    CrossEntity(153, 43),
+
+    CrossEntity(154, 2),
+    CrossEntity(154, 8),
+
+    CrossEntity(155, 5),
+    CrossEntity(155, 43),
+    CrossEntity(155, 48),
+    CrossEntity(155, 49),
+    CrossEntity(155, 51),
+    CrossEntity(155, 53),
+
+    CrossEntity(156, 14),
+    CrossEntity(156, 28),
+    CrossEntity(156, 40),
+
+    CrossEntity(157, 3),
+    CrossEntity(157, 18),
+
+    CrossEntity(158, 1),
+    CrossEntity(158, 7),
+
+    CrossEntity(159, 7),
+    CrossEntity(159, 13),
+    CrossEntity(159, 48),
+
+    CrossEntity(160, 4),
+    CrossEntity(160, 24),
+    CrossEntity(160, 45),
+    CrossEntity(160, 47),
+
+    CrossEntity(161, 5),
+    CrossEntity(161, 13),
+    CrossEntity(161, 14),
+    CrossEntity(161, 31),
+    CrossEntity(161, 39),
+    CrossEntity(161, 44),
+    CrossEntity(161, 48),
+
+    CrossEntity(162, 1),
+    CrossEntity(162, 5),
+    CrossEntity(162, 20),
+    CrossEntity(162, 28),
+    CrossEntity(162, 29),
+
+    CrossEntity(163, 7),
+    CrossEntity(163, 23),
+
+    CrossEntity(164, 11),
+    CrossEntity(164, 37),
+
+    CrossEntity(165, 4),
+    CrossEntity(165, 22),
+    CrossEntity(165, 44),
+
+    CrossEntity(166, 2),
+    CrossEntity(166, 7),
+    CrossEntity(166, 17),
+
+    CrossEntity(167, 5),
+    CrossEntity(167, 36),
+    CrossEntity(167, 43),
+    CrossEntity(167, 48),
+
+    CrossEntity(168, 4),
+    CrossEntity(168, 21),
+    CrossEntity(168, 45),
+
+    CrossEntity(169, 9),
+    CrossEntity(169, 20),
+    CrossEntity(169, 46),
+    CrossEntity(169, 49),
+
+    CrossEntity(170, 4),
+    CrossEntity(170, 16),
+
+    CrossEntity(171, 2),
+    CrossEntity(171, 31),
+    CrossEntity(171, 36),
+
+    CrossEntity(172, 4),
+    CrossEntity(172, 16),
+    CrossEntity(172, 43)
 )

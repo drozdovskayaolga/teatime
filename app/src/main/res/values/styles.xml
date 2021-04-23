@@ -1,14 +1,15 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" >
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/toolbar_text</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
 
-    <style name="AppTheme.Launcher">
+<!--    parent="Theme.MaterialComponents.Light"-->
+    <style name="AppTheme.Launcher" >
         <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
@@ -17,25 +18,26 @@
         <item name="android:textColor">@color/toolbar_text</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="TextButtonStyle">
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:background">@color/transparent</item>
+        <item name="android:backgroundTint">@color/transparent</item>
     </style>
 
     <style name="ButtonSearchStyle">
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:background">@color/transparent</item>
+        <item name="android:backgroundTint">@color/transparent</item>
     </style>
 
     <style name="DrinkNameStyle">
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
@@ -43,6 +45,12 @@
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextForHelp">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
 

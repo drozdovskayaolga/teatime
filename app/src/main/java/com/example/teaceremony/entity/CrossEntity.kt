@@ -7,7 +7,7 @@ import androidx.room.ForeignKey
 @Entity(tableName = "cross_table",
     primaryKeys = ["drinkId", "ingredientId"], foreignKeys = [
         ForeignKey(
-            entity = DetailsEntity::class,
+            entity = DrinksEntity::class,
             parentColumns = ["drinkId"],
             childColumns = ["drinkId"],
             onDelete = ForeignKey.CASCADE
@@ -19,7 +19,7 @@ import androidx.room.ForeignKey
             onDelete = ForeignKey.CASCADE
         )]
 )
-data class IngredientsDetailsCrossRef(
+data class CrossEntity(
     @ColumnInfo(name = "drinkId")
     val drinkId: Int,
     @ColumnInfo(name = "ingredientId")

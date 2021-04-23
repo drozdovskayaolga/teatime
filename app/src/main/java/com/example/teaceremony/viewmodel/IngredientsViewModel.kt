@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.teaceremony.database.Repository
-import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.IngredientsEntity
 import kotlinx.coroutines.launch
 

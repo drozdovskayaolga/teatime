@@ -12,16 +12,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/teamainphoto" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/b_types"
         style="@style/TextButtonStyle"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="76dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="TEA" />
+        tools:text="TEA"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

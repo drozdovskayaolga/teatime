@@ -10,11 +10,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import com.drozdovskaya.teaceremony.R
+import com.example.teaceremony.Analytics
 import com.example.teaceremony.application.Application
 import com.example.teaceremony.viewmodel.DetailsViewModel
 import com.example.teaceremony.viewmodel.DetailsViewModelFactory
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_details.*
-import kotlinx.android.synthetic.main.fragment_details_list.*
+import kotlinx.android.synthetic.main.fragment_drinks.*
 import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.android.synthetic.main.toolbar.view.*
 
@@ -46,13 +51,13 @@ class DetailsFragment: Fragment(R.layout.fragment_details) {
 
         when (type) {
             1 -> {
-                iv_details.setImageResource(R.drawable.teamainphoto)
+                iv_details.setImageResource(R.drawable.cocktailmainphoto)
             }
             2 -> {
-                iv_details.setImageResource(R.drawable.coffeemainphoto)
+                iv_details.setImageResource(R.drawable.teamainphoto)
             }
             else -> {
-                iv_details.setImageResource(R.drawable.cocktailmainphoto)
+                iv_details.setImageResource(R.drawable.coffeemainphoto)
             }
         }
 
@@ -61,5 +66,13 @@ class DetailsFragment: Fragment(R.layout.fragment_details) {
             findNavController().popBackStack()
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        Firebase.analytics.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW) {
+            param(FirebaseAnalytics.Param.SCREEN_NAME, Analytics.Events.details_screen)
+        }
+    }
+
 }
 

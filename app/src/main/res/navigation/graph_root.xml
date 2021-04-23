@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/detailsListFragment"
-        android:name="com.example.teaceremony.fragments.DetailsListFragment"
+        android:name="com.example.teaceremony.fragments.DrinksFragment"
         android:label="TypesOfDrinkFragment"
-        tools:layout="@layout/fragment_details_list">
+        tools:layout="@layout/fragment_drinks">
         <action
             android:id="@+id/action_typesOfDrinkFragment_to_drinkDetailsFragment"
             app:destination="@id/detailsFragment" />

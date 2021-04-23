@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.teaceremony.database.Repository
-import com.example.teaceremony.entity.DetailsEntity
+import com.example.teaceremony.entity.DrinksEntity
 import kotlinx.coroutines.launch
 
 class DetailsViewModel(private val repository: Repository) : ViewModel() {
 
-    val details = MutableLiveData<DetailsEntity>()
+    val details = MutableLiveData<DrinksEntity>()
 
     fun typeOfData (id: Int) {
         viewModelScope.launch {

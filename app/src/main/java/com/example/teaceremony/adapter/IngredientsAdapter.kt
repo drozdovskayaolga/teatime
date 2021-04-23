@@ -3,16 +3,12 @@ package com.example.teaceremony.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.CheckBox
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.drozdovskaya.teaceremony.R
-import com.example.teaceremony.entity.DetailsEntity
 import com.example.teaceremony.entity.IngredientsEntity
-import com.example.teaceremony.entity.TypesEntity
 
 class IngredientsAdapter(private val onItemCheck: () -> Unit) :
     ListAdapter<IngredientsEntity, IngredientsAdapter.IngredientsViewHolder>(WordsComparator()) {

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.drozdovskaya.teaceremony.R
 import com.example.teaceremony.entity.TypesEntity
+import com.google.android.material.button.MaterialButton
 
 class TypesAdapter(private val onItemClicked: (TypesEntity) -> Unit) :
     ListAdapter<TypesEntity, TypesAdapter.TypesViewHolder>(WordsComparator()) {
@@ -40,13 +41,13 @@ class TypesAdapter(private val onItemClicked: (TypesEntity) -> Unit) :
 
             when (typesEntity.id) {
                 1 -> {
-                    typeImage.setImageResource(R.drawable.teamainphoto)
+                    typeImage.setImageResource(R.drawable.cocktailmainphoto)
                 }
                 2 -> {
-                    typeImage.setImageResource(R.drawable.coffeemainphoto)
+                    typeImage.setImageResource(R.drawable.teamainphoto)
                 }
                 else -> {
-                    typeImage.setImageResource(R.drawable.cocktailmainphoto)
+                    typeImage.setImageResource(R.drawable.coffeemainphoto)
                 }
             }
         }
